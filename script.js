@@ -76,14 +76,59 @@
 // plus(8, 60);
 
 
-const player = {
-    name: "cho",
-    point:50,
-    fat:true,
-    sayHello:function(otherPat){
-        console.log("hello"+ otherPat+" ///dfd");
-    }
-}
+// const player = {
+//     name: "cho",
+//     point:50,
+//     fat:true,
+//     sayHello:function(otherPat){
+//         console.log("hello"+ otherPat+" ///dfd");
+//     }
+// }
 
-console.log(player.name);
-player.sayHello("meee");
+// console.log(player.name);
+// player.sayHello("meee");
+
+
+// const age = 96;
+// function calculateKrAge(ageOfForeigner){
+//     ageOfForeigner+2;
+//     return "helllo~";
+// };
+
+// const krAge = calculateKrAge(age);
+
+// console.log(krAge);
+
+
+// const calculator = {
+//     plus: function(a, b){
+//         return a+b;
+//     },
+//     divide:function(a,b){
+//         return a/b
+//     }
+// }
+
+// console.log(calculator.plus(1,2));
+// console.log(calculator.divide(1,2));
+
+// const age = prompt("how old are you???");
+
+// console.log(typeof age, parseInt(age));
+// const ParsAge = parseInt(age);
+// console.log(typeof ParsAge);
+
+
+
+
+const age = parseInt( prompt("put your age"));
+
+if(isNaN(age)){
+    console.log("숫자아님 다시 입력하셈");
+}else if(age >= 18){
+    console.log("숫자임 18살 이상 체크");
+}else if(age < 0){
+    console.log("정상적인 숫자입력요청");
+}else {
+    console.log("술노노");
+}
