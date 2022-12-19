@@ -121,14 +121,47 @@
 
 
 
-const age = parseInt( prompt("put your age"));
+// const age = parseInt( prompt("put your age"));
 
-if(isNaN(age)){
-    console.log("숫자아님 다시 입력하셈");
-}else if(age >= 18){
-    console.log("숫자임 18살 이상 체크");
-}else if(age < 0){
-    console.log("정상적인 숫자입력요청");
-}else {
-    console.log("술노노");
-}
+// if(isNaN(age)){
+//     console.log("숫자아님 다시 입력하셈");
+// }else if(age >= 18){
+//     console.log("숫자임 18살 이상 체크");
+// }else if(age < 0){
+//     console.log("정상적인 숫자입력요청");
+// }else {
+//     console.log("술노노");
+// }
+
+
+//document.title = "change title!";
+
+// const title = document.getElementById("title");
+// title.innerText = "chage";
+
+// console.log(title.id);
+// console.log(title.className);
+
+
+// const hellos = document.getElementsByClassName("classnametest");
+
+// console.log(hellos);
+
+// const hellos = document.getElementsByTagName("h1");
+
+// console.log(hellos);
+
+
+// const hellos = document.querySelector(".classnametest h1");
+
+// console.log(hellos);
+
+
+const hellos = document.querySelector(".classnametest h1");
+const helloos = document.getElementsByClassName("classnametest");
+
+console.log(hellos);
+
+console.log(helloos);
+
+hellos.innerText = "change hellllos~";
