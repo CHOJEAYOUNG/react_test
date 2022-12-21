@@ -157,11 +157,100 @@
 // console.log(hellos);
 
 
-const hellos = document.querySelector(".classnametest h1");
-const helloos = document.getElementsByClassName("classnametest");
+// const hellos = document.querySelector(".classnametest h1");
+// const helloos = document.getElementsByClassName("classnametest");
 
-console.log(hellos);
+// console.log(hellos);
 
-console.log(helloos);
+// console.log(helloos);
 
-hellos.innerText = "change hellllos~";
+// hellos.innerText = "change hellllos~";
+
+//const title = document.querySelector("div.hello:fitst-child hi");
+
+// const title = document.querySelector("div.hello:first-child h1");
+
+//  console.dir(title);
+// // title.style.color = "red";
+
+// function handleTitleClick(){
+// //    console.log("title was handled");
+//         title.style.color = "red";
+// }
+
+// function handleMouseEnter(){
+// //    console.log("in... in");
+// title.innerText = "mouse is here ";
+// }
+
+// function handleMouseLeave(){
+
+//     title.innerText = "mouse is bye byew~~~";
+//   //  console.log("bye bye");
+// }
+
+// function handleWindowResize(){
+//     document.body.style.backgroundColor = "gray";
+// }
+
+
+// function handleWindowCopy(){
+//     alert("hellllllo");
+// }
+
+// //title.addEventListener("click", handleTitleClick);
+// title.onclick = handleTitleClick;
+// title.addEventListener("mouseenter", handleMouseEnter);
+
+// title.addEventListener("mouseleave", handleMouseLeave);
+
+
+
+// window.addEventListener("resize", handleWindowResize);
+
+// window.addEventListener("copy",handleWindowCopy );
+
+const title = document.querySelector("div.hello:first-child h1");
+console.log(title.style.color);
+console.log("dddd");
+
+title.addEventListener("click", handleTitleClick);
+
+function handleTitleClick(){
+    const clickconst = "active";
+    title.classList.toggle(clickconst);
+
+    // if(title.classList.contains(clickconst)){
+    //     title.classList.remove(clickconst);
+    // }else{
+    //     title.classList.add(clickconst);
+    // }
+
+
+    // if(title.className == "active"){
+    //     title.className = "";
+    // }else{
+    // title.className = "active";
+    // }
+
+
+// //    console.log("title was handled");
+//         // title.style.color = "red";
+
+//         console.log(title.style.color);
+
+//         const orgcolor = title.style.color;
+//         let chagecolor ;
+
+
+//         if(orgcolor == "blue"){
+//             chagecolor = "red";
+//         }else{
+//             chagecolor = "blue";
+//         }
+
+//         title.style.color = chagecolor;
+}
+
+
+
