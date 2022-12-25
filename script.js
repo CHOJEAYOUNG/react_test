@@ -210,15 +210,15 @@
 
 // window.addEventListener("copy",handleWindowCopy );
 
-const title = document.querySelector("div.hello:first-child h1");
-console.log(title.style.color);
-console.log("dddd");
+// const title = document.querySelector("div.hello:first-child h1");
+// console.log(title.style.color);
+// console.log("dddd");
 
-title.addEventListener("click", handleTitleClick);
+// title.addEventListener("click", handleTitleClick);
 
-function handleTitleClick(){
-    const clickconst = "active";
-    title.classList.toggle(clickconst);
+// function handleTitleClick(){
+//     const clickconst = "active";
+//     title.classList.toggle(clickconst);
 
     // if(title.classList.contains(clickconst)){
     //     title.classList.remove(clickconst);
@@ -250,7 +250,68 @@ function handleTitleClick(){
 //         }
 
 //         title.style.color = chagecolor;
+//}
+
+
+
+//const loginForm = document.getElementById("login-form");
+//const loginInput = loginForm.querySelector("input");
+//const loginButton = loginForm.querySelector("button");
+
+
+//const loginInput = document.querySelector("#login-form input");
+//const loginButton = document.querySelector("#login-form button");
+
+//loginButton.addEventListener("click", loginButtonClickEvent);
+
+// function loginButtonClickEvent(){
+//     const value = loginInput.value;
+
+//     if(value == ""){
+//         alert("plesss insert id");
+//     }
+    
+//     // else if (value.length >= 15){
+//     //     alert("toooo long");
+
+
+//     // }
+//     console.log(loginInput.value);
+// }
+
+
+
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+
+const greeting = document.querySelector("#greeting");
+const HIDDEN_CLASSNAME = "hidden";
+
+
+// const link = document.querySelector("a");
+
+function onLoginSubmit(event){
+    // const username = loginInput.value;
+    // console.log(username);
+
+    event.preventDefault();
+    const username = loginInput.value;
+    loginForm.classList.add(HIDDEN_CLASSNAME); 
+    
+//    greeting.innerText = "helllo " + username;
+    greeting.innerText = `helllo ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+
+//    console.log(username);
+    //console.log(event);
 }
 
+// function linkClickEvent(event){
+//     event.preventDefault();
+//     console.dir(event);
+// //    alert("test!!");
+// }
 
+loginForm.addEventListener("submit", onLoginSubmit);
 
+// link.addEventListener("click", linkClickEvent);
