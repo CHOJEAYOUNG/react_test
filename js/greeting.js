@@ -286,6 +286,7 @@ const loginInput = document.querySelector("#login-form input");
 
 const greeting = document.querySelector("#greeting");
 const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
 
 
 // const link = document.querySelector("a");
@@ -296,14 +297,10 @@ function onLoginSubmit(event){
 
     event.preventDefault();
     const username = loginInput.value;
+    localStorage.setItem(USERNAME_KEY, username);
     loginForm.classList.add(HIDDEN_CLASSNAME); 
-    
+    paintFrettins(username);
 //    greeting.innerText = "helllo " + username;
-    greeting.innerText = `helllo ${username}`;
-    greeting.classList.remove(HIDDEN_CLASSNAME);
-
-//    console.log(username);
-    //console.log(event);
 }
 
 // function linkClickEvent(event){
@@ -312,6 +309,20 @@ function onLoginSubmit(event){
 // //    alert("test!!");
 // }
 
-loginForm.addEventListener("submit", onLoginSubmit);
-
 // link.addEventListener("click", linkClickEvent);
+
+function paintFrettins(username){
+    greeting.innerText = `helllo ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+
+const savedUserName = localStorage.getItem(USERNAME_KEY);
+
+if(savedUserName == null){
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener("submit", onLoginSubmit);
+
+}else{
+    paintFrettins(savedUserName);
+    console.log(savedUserName);
+}
