@@ -14,7 +14,7 @@ function getClock(){
 
     clock.innerText = dateString;
 
-    console.log(dateString);
+    //console.log(dateString);
 }
 
 
